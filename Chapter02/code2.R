@@ -39,9 +39,13 @@ head(socal.water)
 library(corrplot)
 water.cor <- cor(socal.water)
 water.cor
-corrplot(water.cor, method = "ellipse")
-
-pairs(~ ., data = socal.water)
+corrplot(water.cor, method = "ellipse") #椭圆形图
+pairs(~ ., data = socal.water) # 散点图
+# 下面是另一个更好用的分析变量相关性的可视化工具，需要load libraries ggplot2 and ggally
+library(ggplot2)
+library(GGally)  
+# create pairs plot
+ggpairs(socal.water)
 
 library(leaps)
 fit <- lm(BSAAM ~ ., data = socal.water)
