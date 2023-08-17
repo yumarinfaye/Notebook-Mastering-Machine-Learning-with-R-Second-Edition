@@ -41,7 +41,7 @@ water.cor <- cor(socal.water)
 water.cor
 corrplot(water.cor, method = "ellipse") #椭圆形图
 pairs(~ ., data = socal.water) # 散点图
-# 下面是另一个更好用的分析变量相关性的可视化工具，需要load libraries ggplot2 and ggally
+# 下面是另一个更好用的分析变量相关性的可视化工具，需要load libraries ggplot2 and ggally;对与数值变量和分类变量均可可视化反应相关性，而corrplot包中则不可。
 library(ggplot2)
 library(GGally)  
 # create pairs plot
