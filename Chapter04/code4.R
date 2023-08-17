@@ -7,7 +7,7 @@ library(caret) #this will help identify the appropriate parameters
 
 data(prostate)
 str(prostate)
-plot(prostate)
+pairs(prostate) #书上有误，来自corrplot包函数
 plot(prostate$gleason, ylab = "Gleason Score")
 table(prostate$gleason)
 boxplot(prostate$lpsa ~ prostate$gleason, xlab = "Gleason Score", 
